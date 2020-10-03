@@ -16,7 +16,7 @@ before_script:
 script:
     - docker --version # print the version for logging
     - docker build -t udagram-front-end .
-    - docker tag simple-node newair007/udagram-front-end:latest
+    - docker tag udagram-front-end newair007/udagram-front-end:latest
 
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
